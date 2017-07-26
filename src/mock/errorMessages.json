@@ -1,0 +1,18 @@
+{
+  "error200": {
+      "Code": "200",
+    "Message": "No Problem",
+  },
+  "error401": {
+      "Code": "401",
+    "Message": "Service Down, please try again later",
+  },
+  "error402": {
+      "Code": "402",
+    "Message": "Could not retrieve your details, please try again later",
+  },
+  "error403": {
+      "Code": "403",
+    "Message": "Connectivity Issues, please check your connection and try again",
+  },
+}

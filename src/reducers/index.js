@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import wordReducer from './wordReducer';
+import errorCodeReducer from './errorCodeReducer';
+import errorMessageReducer from './errorMessageReducer';
 
 export default combineReducers({
-  wordfun: wordReducer
+  errorCode: errorCodeReducer,
+  errorMessage: errorMessageReducer
 });

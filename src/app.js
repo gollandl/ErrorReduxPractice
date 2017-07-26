@@ -1,26 +1,18 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import PopUp from './components/popup';
 import reducers from './reducers';
-import ContainerOne from './components/ContainerOne';
+import ContainerTwo from './components/ContainerTwo';
+
 
 const App = () => {
     return(
       <Provider store={createStore(reducers)} >
-        <View style={styles.container}>
-          <ContainerOne />
-        </View>
+        <ContainerTwo />
       </Provider>
     );
 }
 
 export default App;
-
-const styles = {
-  container: {
-    alignItems:'center',
-    justifyContent:'center',
-    marginTop:100,
-  },
-}

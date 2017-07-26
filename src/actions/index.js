@@ -1,3 +1,12 @@
+export const setErrorCode = () => {
+  return {
+    type: 'setErrorCode',
+  }
+};
+
+
+
+
 export const upperCase = (inputWord) => {
   return {
     type: 'upperCase',
@@ -11,3 +20,19 @@ export const lowerCase = (inputWord) => {
     payload: inputWord
   };
 };
+
+export const add = (count) => {
+  return {
+    type: 'add',
+    payload: count
+  };
+};
+
+export const openPopUp = message => {
+  return {
+    type: 'openPopUp',
+    payload: {
+      message
+    }
+  }
+}
