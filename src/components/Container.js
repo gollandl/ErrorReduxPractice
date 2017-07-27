@@ -3,29 +3,27 @@ import { View, Text, Button } from 'react-native';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Popup from 'react-native-popup';
-import data from '../mock/errorMessagesArray.json';
 
-
-
-class ContainerTwo extends Component {
-
-
+class Container extends Component {
   renderPopup() {
-    const { errorCode, errorMessage } = this.props;
-
+    const { errorCode } = this.props;
     var message=errorCode.message;
-    this.popup.alert(message);
+    var code=errorCode.serverCode;
+
+    this.popup.alert(code,message);
+  }
+
+  handleOnPress() {
+    const { setErrorCode } = this.props;
+
+    setErrorCode();
+    this.renderPopup();
   }
 
   render() {
-  const { errorCode, setErrorCode, errorMessage } = this.props;
-
     return(
       <View style={styles.container}>
-        <Button title='Set Error Code' onPress={() => setErrorCode()} />
-        <Text>{errorCode.code}</Text>
-        <Text>{errorCode.message}</Text>
-        <Button title='Pay Now' onPress={this.renderPopup.bind(this)} />
+        <Button title='Pay Now' onPress={this.handleOnPress.bind(this)} />
         <Popup ref={popup => this.popup = popup} />
       </View>
     );
@@ -43,7 +41,6 @@ const styles = {
 const mapStateToProps = state => {
   return {
     errorCode: state.errorCode,
-    errorMessage: state.errorMessage
    };
 };
 
@@ -53,4 +50,4 @@ const mapDispatchToProps = function(dispatch) {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ContainerTwo);
+export default connect(mapStateToProps, mapDispatchToProps)(Container);

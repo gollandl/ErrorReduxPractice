@@ -6,6 +6,7 @@ export default (state = 1, action) => {
       var code = Math.floor(Math.random() * 3) + 1;
       return {
         code,
+        serverCode: data[code].Code,
         message: data[code].Message,
       }
     default:
