@@ -1,0 +1,22 @@
+[
+  {
+        "id": 0,
+      "Code": "200",
+    "Message": "No Problem",
+  },
+  {
+        "id": 1,
+      "Code": "401",
+    "Message": "Service Down, please try again later",
+  },
+  {
+        "id": 2,
+      "Code": "402",
+    "Message": "Could not retrieve your details, please try again later",
+  },
+  {
+        "id": 3,
+      "Code": "403",
+    "Message": "Connectivity Issues, please check your connection and try again",
+  },
+]

@@ -5,8 +5,6 @@ export const setErrorCode = () => {
 };
 
 
-
-
 export const upperCase = (inputWord) => {
   return {
     type: 'upperCase',
